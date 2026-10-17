@@ -1,0 +1,33 @@
+{
+  "name": "agent-vs-agent",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Agent VS Agent ($AVA) — skill-based pixel-combat PvP on Solana.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build.mjs",
+    "start": "NODE_ENV=production node --import tsx server/index.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "tsx tests/run.ts",
+    "test:browser": "npm run build && tsx tests/browser.ts"
+  },
+  "dependencies": {
+    "@wallet-standard/app": "^1.1.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tsx": "^4.20.0",
+    "tweetnacl": "^1.0.3",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@types/ws": "^8.5.12",
+    "esbuild": "^0.25.0",
+    "playwright": "^1.56.0",
+    "typescript": "^5.9.0"
+  }
+}
